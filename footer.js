@@ -7,7 +7,7 @@ const footerHTML = `
 <footer class="bg-[#eff1f2] w-full py-12 border-t border-[#abadae]/15 mt-auto">
     <div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-8">
         <div class="flex flex-col items-center md:items-start gap-2">
-            <div class="text-lg font-black text-[#2c2f30] uppercase tracking-tighter">Ethereal Canvas</div>
+            <div class="text-lg font-black text-[#2c2f30] uppercase tracking-tighter">MinuteBytes</div>
             <div class="text-[#2c2f30]/50 font-['Inter'] text-[10px] uppercase tracking-widest">
                 Editorial Precision in Image Processing
             </div>
@@ -21,7 +21,7 @@ const footerHTML = `
         </div>
         
         <div class="text-[#2c2f30]/40 font-['Inter'] text-[10px] uppercase tracking-[0.2em]">
-            © 2024 Ethereal Canvas. All rights reserved.
+            © 2024 MinuteBytes. All rights reserved.
         </div>
     </div>
 </footer>

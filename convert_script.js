@@ -1,5 +1,5 @@
 /**
- * LuminaConvert - Automated Image Format Transformation Engine
+ * MinuteBytesConvert - Automated Image Format Transformation Engine
  * Automatically triggers conversion on format selection and handles broader file types.
  */
 

@@ -1,5 +1,5 @@
 /**
- * LuminaResize - Automated Pica-Powered Resizing Engine
+ * MinuteBytesResize - Automated Pica-Powered Resizing Engine
  * Automatically triggers resizing on input changes with high-performance debouncing.
  */
 

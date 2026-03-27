@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Ethereal Canvas - Professional Image Tools</title>
+  <title>MinuteBytes - Professional Image Tools</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
@@ -100,6 +100,38 @@
     h2,
     h3 {
       font-family: 'Manrope', sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      main,
+      #editor-section,
+      #upload-section,
+      #drop-zone,
+      main section,
+      main aside,
+      main .max-w-7xl,
+      main .max-w-6xl,
+      main .max-w-5xl,
+      main .max-w-4xl,
+      main .max-w-3xl,
+      main .max-w-2xl {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      main .flex,
+      main .inline-flex {
+        flex-wrap: wrap;
+      }
+
+      main button,
+      main input,
+      main select,
+      main textarea,
+      main a.inline-block {
+        width: 100%;
+        max-width: 100%;
+      }
     }
   </style>
 </head>

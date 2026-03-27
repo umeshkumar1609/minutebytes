@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Tools Hub | LuminaCompress</title>
+    <title>Tools Hub | MinuteBytes</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
@@ -93,6 +93,37 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
         }
+        @media (max-width: 768px) {
+            main,
+            #editor-section,
+            #upload-section,
+            #drop-zone,
+            main section,
+            main aside,
+            main .max-w-7xl,
+            main .max-w-6xl,
+            main .max-w-5xl,
+            main .max-w-4xl,
+            main .max-w-3xl,
+            main .max-w-2xl {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            main .flex,
+            main .inline-flex {
+                flex-wrap: wrap;
+            }
+
+            main button,
+            main input,
+            main select,
+            main textarea,
+            main a.inline-block {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -111,7 +142,7 @@
                 All-in-one <span class="text-primary">Creative Hub</span> for Image Precision.
             </h1>
             <p class="text-lg text-on-surface-variant max-w-2xl leading-relaxed">
-                Experience the ethereal canvas of professional image processing. From high-fidelity compression to
+                Experience the MinuteBytes of professional image processing. From high-fidelity compression to
                 surgical cropping, every tool is designed to melt into your workflow.
             </p>
         </header>
@@ -206,7 +237,7 @@
                 </div>
                 <h3 class="text-xl font-bold font-headline mb-2">Rotate Image</h3>
                 <p class="text-sm text-on-surface-variant mb-auto leading-relaxed">
-                    Fix orientation errors or create artistic flips. Instant precision at 90° intervals or custom
+                    Fix orientation errors or create artistic flips. Instant precision at 90Â° intervals or custom
                     angles.
                 </p>
                 <div class="mt-8">
@@ -221,7 +252,7 @@
         <section class="mt-24 rounded-xl overflow-hidden relative min-h-[300px] flex items-center">
             <div class="absolute inset-0 z-0">
                 <img class="w-full h-full object-cover"
-                    data-alt="soft flowing silk textures in shades of teal and slate grey creating a calm ethereal studio atmosphere"
+                    data-alt="soft flowing silk textures in shades of teal and slate grey creating a calm MinuteBytes studio atmosphere"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJnfl88x-3LR3rKTz6wUcGfw0NrqLgPg6lEnLs2kQNUbPTxbbs68NpnQGMrk5TH2R_dIIBY5xPUoJDe2rEg5wjc4mRkhUxlQDBgEPibpb6i5g3ALUKyFAS2wWCpHTTjkWt1KHG5DoDcY5-uyMu4Zc2MwPSdGmV1yttrwbeYyECtJQuN7KJ0IuX09GR9EETgGJ8pzoiCPsAZDvC88-xZjfzQrL3U8448lKzpCTODEBvQ9S3EHRihpTbQqRs04auZJzNJkHqSG903p3Z" />
                 <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
             </div>
@@ -241,3 +272,4 @@
 </body>
 
 </html>
+

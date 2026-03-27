@@ -1,5 +1,5 @@
 /**
- * LuminaCompress - Stabilized Image Compression Engine
+ * MinuteBytes - Stabilized Image Compression Engine
  *
  * Core fixes in this version:
  * 1) GIF previews always use object URLs (never canvas) to preserve animation.

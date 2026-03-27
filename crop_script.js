@@ -1,5 +1,5 @@
 /**
- * LuminaCrop - Precision Framing Engine (Upgraded)
+ * MinuteBytes - Precision Framing Engine (Upgraded)
  * Built on Cropper.js with professional mouse-drags, aspect ratios, and transformations.
  */
 
