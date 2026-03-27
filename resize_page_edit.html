@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LuminaResize | Editor</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#006573",
+                        "primary-dim": "#005865",
+                        "secondary": "#3854b7",
+                        "on-primary": "#dbf8ff",
+                        "surface": "#f5f6f7",
+                        "on-surface": "#2c2f30",
+                        "on-surface-variant": "#595c5d",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#5de3fc",
+                        "secondary-container": "#c6cfff",
+                        "on-secondary-container": "#1f3ea2",
+                        "outline-variant": "#abadae",
+                        "surface-container-high": "#e0e3e4",
+                        "surface-container-low": "#eff1f2",
+                        "error": "#b31b25"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <!-- Pica Resizer Library -->
+    <script src="https://unpkg.com/pica/dist/pica.min.js"></script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .bg-ethereal-gradient { background: radial-gradient(circle at 50% -20%, #dbf8ff 0%, #f5f6f7 100%); }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+    <div id="header-placeholder"></div>
+    <script src="header.js"></script>
+
+    <main id="editor-section" class="flex-grow flex flex-col items-center justify-start px-6 py-24 bg-ethereal-gradient">
+        <div class="text-center max-w-3xl mb-12 space-y-4">
+            <h1 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface leading-tight">
+                Scale with <span class="text-primary italic">Surgical Precision</span>
+            </h1>
+        </div>
+
+        <div class="w-full max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Preview Section -->
+                <section class="lg:col-span-7 space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Original Image Pane -->
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center px-1">
+                                <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-on-surface-variant">Original</span>
+                                <span id="original-info-label" class="text-[10px] font-bold text-primary tracking-widest">0 x 0 PX</span>
+                            </div>
+                            <div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm border border-outline-variant/10 aspect-square flex items-center justify-center overflow-hidden bg-surface-container-low group">
+                                <img id="original-preview" alt="Original Image" class="max-w-full max-h-full object-contain rounded-md" src=""/>
+                            </div>
+                        </div>
+
+                        <!-- Resized Image Pane -->
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center px-1">
+                                <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-on-surface-variant">Resized</span>
+                                <span id="resized-info-label" class="text-[10px] font-bold text-secondary tracking-widest">0 x 0 PX</span>
+                            </div>
+                            <div id="resized-container" class="bg-surface-container-lowest rounded-xl p-3 shadow-sm border border-outline-variant/10 aspect-square flex items-center justify-center overflow-hidden bg-surface-container-low relative group opacity-50 transition-all duration-500">
+                                <img id="resized-preview" alt="Resized Image" class="max-w-full max-h-full object-contain rounded-md hidden" src=""/>
+                                <!-- Placeholder -->
+                                <div id="resized-placeholder" class="flex flex-col items-center justify-center text-on-surface-variant/30 text-center">
+                                    <span class="material-symbols-outlined text-4xl mb-2">aspect_ratio</span>
+                                    <span class="text-[9px] font-bold uppercase tracking-[0.2em]">Adjust dimensions<br>& click resize</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between p-8 bg-surface-container-low rounded-lg border border-outline-variant/10">
+                        <div class="flex items-center gap-6">
+                            <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                                <span class="material-symbols-outlined">photo_library</span>
+                            </div>
+                            <div>
+                                <p id="file-name-display" class="font-headline font-bold text-on-surface">image_name.jpg</p>
+                                <p id="file-format-display" class="font-label text-xs text-on-surface-variant opacity-70 uppercase tracking-widest">JPEG</p>
+                            </div>
+                        </div>
+                        <button id="clear-btn" class="text-error font-bold text-[10px] tracking-[0.2em] uppercase hover:underline underline-offset-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">delete</span>
+                            Clear
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Controls Section -->
+                <aside class="lg:col-span-5 space-y-8">
+                    <div class="bg-surface-container-high p-8 md:p-10 rounded-xl space-y-10 border border-outline-variant/10 shadow-sm">
+                        <div class="space-y-8">
+                            <label class="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-on-surface-variant block">Dimensions (PX)</label>
+                            
+                            <div class="grid grid-cols-2 gap-6 relative">
+                                <!-- Width -->
+                                <div class="space-y-3">
+                                    <span class="text-[11px] font-bold text-on-surface-variant/60 uppercase">Width</span>
+                                    <input type="number" id="resize-width" class="w-full bg-surface-container-lowest border-none rounded-lg p-4 font-headline font-bold text-xl text-primary focus:ring-2 focus:ring-primary/20 transition-all" value="1920">
+                                </div>
+                                
+                                <!-- Height -->
+                                <div class="space-y-3">
+                                    <span class="text-[11px] font-bold text-on-surface-variant/60 uppercase">Height</span>
+                                    <input type="number" id="resize-height" class="w-full bg-surface-container-lowest border-none rounded-lg p-4 font-headline font-bold text-xl text-primary focus:ring-2 focus:ring-primary/20 transition-all" value="1080">
+                                </div>
+
+                                <!-- Upscale Warning -->
+                                <div id="upscale-warning" class="col-span-2 hidden">
+                                    <p class="text-[10px] text-error font-bold tracking-wider uppercase mt-2 flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-sm">warning</span>
+                                        Upscaling may reduce image quality
+                                    </p>
+                                </div>
+
+                                <!-- Aspect Ratio Badge -->
+                                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-2">
+                                    <button id="lock-btn" class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md active:scale-95 transition-all">
+                                        <span id="lock-icon" class="material-symbols-outlined text-lg">link</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <label class="font-label text-[10px] font-bold tracking-[0.2em] uppercase text-on-surface-variant block">Format Option</label>
+                            <div class="flex gap-2">
+                                <button class="format-btn flex-1 py-3 px-4 rounded-md bg-secondary-container text-on-secondary-container font-bold text-sm" data-format="image/jpeg">JPG</button>
+                                <button class="format-btn flex-1 py-3 px-4 rounded-md bg-surface-container-highest text-on-surface-variant font-semibold text-sm hover:bg-surface-container-lowest" data-format="image/png">PNG</button>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 space-y-4">
+                            <!-- Manual resize button removed: handled automatically -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <button id="download-btn" class="bg-surface-container-highest text-on-surface font-semibold py-4 rounded-full text-sm hover:bg-surface-container-lowest transition-all flex items-center justify-center gap-2 opacity-50 cursor-not-allowed" disabled>
+                                    <span class="material-symbols-outlined text-lg">download</span>
+                                    Download
+                                </button>
+                                <button id="new-image-btn" class="bg-surface-container-highest text-on-surface font-semibold py-4 rounded-full text-sm hover:bg-surface-container-lowest transition-all flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-lg">upload</span>
+                                    New
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="footer.js"></script>
+
+    <script src="resize_script.js"></script>
+</body>
+
+</html>

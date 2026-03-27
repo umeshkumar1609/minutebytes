@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Privacy Policy | Ethereal Canvas</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#f5f6f7",
+                        "primary": "#006573",
+                        "on-surface": "#2c2f30",
+                        "on-surface-variant": "#595c5d",
+                        "surface-container-low": "#eff1f2",
+                        "outline-variant": "#abadae",
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+    <div id="header-placeholder"></div>
+    <script src="header.js"></script>
+
+    <main class="flex-grow max-w-4xl mx-auto px-8 pt-32 pb-24 w-full">
+        <header class="mb-16 text-center">
+            <div class="inline-flex items-center px-3 py-1 mb-6 rounded-full bg-primary/10 text-primary text-[10px] font-black tracking-widest uppercase">
+                Legal & Privacy
+            </div>
+            <h1 class="text-5xl font-extrabold font-headline tracking-tighter leading-tight mb-4">
+                Privacy Policy
+            </h1>
+            <p class="text-on-surface-variant italic">Last updated: March 2024</p>
+        </header>
+
+        <article class="bg-white rounded-[2rem] p-10 md:p-16 shadow-xl shadow-on-surface/5 border border-outline-variant/10 prose prose-slate max-w-none">
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold font-headline mb-4 text-primary">1. Our Commitment to Privacy</h2>
+                <p class="text-on-surface-variant leading-relaxed">
+                    At **Ethereal Canvas**, we believe your creative work belongs entirely to you. Unlike many online editing platforms, our tools are built on a **privacy-first architecture** designed to keep your files secure.
+                </p>
+                <p class="text-on-surface-variant leading-relaxed mt-4">
+                    All image processing across our tools — including **LuminaCompress, LuminaResize, LuminaCrop, and LuminaConvert** — takes place **directly inside your web browser**. Your images are never uploaded to our servers or stored by us.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold font-headline mb-4 text-primary">2. In-Browser Image Processing</h2>
+                <p class="text-on-surface-variant leading-relaxed mb-4">
+                    When you upload an image to Ethereal Canvas:
+                </p>
+                <ul class="list-disc pl-6 space-y-3 text-on-surface-variant">
+                    <li>The image is processed locally within your browser.</li>
+                    <li>The image is **never transmitted to external servers** for processing.</li>
+                    <li>All editing operations are performed using your device's processing power through technologies such as the **HTML5 Canvas API**.</li>
+                </ul>
+                <p class="text-on-surface-variant leading-relaxed mt-6">
+                    To enable editing workflows between pages, we may temporarily store image data in your browser using **session storage**. This data:
+                </p>
+                <ul class="list-disc pl-6 mt-4 space-y-2 text-on-surface-variant italic">
+                    <li>Exists only within your active browser tab</li>
+                    <li>Is automatically removed when the tab is closed</li>
+                    <li>Is never transmitted to our servers</li>
+                </ul>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold font-headline mb-4 text-primary">3. Cookies and Analytics</h2>
+                <p class="text-on-surface-variant leading-relaxed">
+                    Ethereal Canvas does **not use invasive tracking technologies**.
+                </p>
+                <p class="text-on-surface-variant leading-relaxed mt-4">
+                    We may use limited and anonymized analytics to understand how visitors interact with our website and which tools are most useful. This information helps us improve the platform but **cannot identify individual users** and is never connected to the images you process.
+                </p>
+                <p class="text-on-surface-variant leading-relaxed mt-4">
+                    We do **not sell, rent, or share personal data** with advertisers.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold font-headline mb-4 text-primary">4. Third-Party Resources</h2>
+                <p class="text-on-surface-variant leading-relaxed mb-4">
+                    Our website may load certain third-party libraries or assets through trusted content delivery networks (CDNs). These may include tools such as:
+                </p>
+                <ul class="list-disc pl-6 space-y-2 text-on-surface-variant font-medium">
+                    <li>Cropper.js</li>
+                    <li>Pica.js</li>
+                    <li>UPNG.js</li>
+                    <li>Google Fonts</li>
+                </ul>
+                <p class="text-on-surface-variant leading-relaxed mt-6">
+                    These resources help power our editing tools but **do not receive or process your uploaded images or creative content**.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold font-headline mb-4 text-primary">5. Data Security</h2>
+                <p class="text-on-surface-variant leading-relaxed">
+                    Because all image processing happens locally in your browser, your files remain on your device. This architecture significantly reduces the risk of data exposure compared to server-based editing platforms.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold font-headline mb-4 text-primary">6. Changes to This Policy</h2>
+                <p class="text-on-surface-variant leading-relaxed">
+                    We may update this Privacy Policy occasionally to reflect improvements to our services or legal requirements. Any updates will be posted on this page.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold font-headline mb-4 text-primary">7. Contact Us</h2>
+                <p class="text-on-surface-variant leading-relaxed mb-8">
+                    If you have any questions about this Privacy Policy or how your data is handled, please contact us through our website.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center pt-8 border-t border-outline-variant/10">
+                    <a href="contact_support.html" class="bg-primary text-white px-10 py-4 rounded-full font-bold text-sm hover:opacity-90 active:scale-95 transition-all shadow-xl shadow-primary/10 text-center">
+                        Contact Support Center
+                    </a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="footer.js"></script>
+</body>
+</html>

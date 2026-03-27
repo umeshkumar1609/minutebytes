@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Ethereal Canvas</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#006573",
+                        "primary-dim": "#005865",
+                        "secondary": "#3854b7",
+                        "on-primary": "#dbf8ff",
+                        "surface": "#f5f6f7",
+                        "on-surface": "#2c2f30",
+                        "on-surface-variant": "#595c5d",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#5de3fc",
+                        "secondary-container": "#c6cfff",
+                        "on-secondary-container": "#1f3ea2"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .bg-ethereal-gradient { background: radial-gradient(circle at 50% -20%, #dbf8ff 0%, #f5f6f7 100%); }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+    <div id="header-placeholder"></div>
+    <script src="header.js"></script>
+
+    <main class="flex-grow max-w-7xl mx-auto px-8 py-24 w-full">
+        <!-- Hero Section -->
+        <section class="max-w-3xl mb-24">
+            <div class="inline-flex items-center px-4 py-1.5 mb-8 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase">
+                The Mission
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold font-headline text-on-surface tracking-tighter leading-tight mb-8">
+                Editorial Precision for the <span class="text-primary italic">Digital Age</span>.
+            </h1>
+            <p class="text-xl text-on-surface-variant leading-relaxed font-light">
+                We believe that performance shouldn't come at the cost of beauty. Ethereal Canvas was born from the need for professional-grade imaging tools that live entirely in the browser.
+            </p>
+        </section>
+
+        <!-- Values Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-32">
+            <div class="space-y-6">
+                <div class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-3xl">verified_user</span>
+                </div>
+                <h3 class="text-2xl font-bold font-headline">Privacy First</h3>
+                <p class="text-on-surface-variant leading-relaxed">Your images are your property. Every operation happens locally in your browser memory—nothing ever touches our servers.</p>
+            </div>
+            <div class="space-y-6">
+                <div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                    <span class="material-symbols-outlined text-3xl">speed</span>
+                </div>
+                <h3 class="text-2xl font-bold font-headline">Lightning Speed</h3>
+                <p class="text-on-surface-variant leading-relaxed">Using modern WebAssembly and Canvas APIs, we deliver near-instant results even for large batches of high-resolution assets.</p>
+            </div>
+            <div class="space-y-6">
+                <div class="w-16 h-16 rounded-2xl bg-surface-container-high flex items-center justify-center text-on-surface">
+                    <span class="material-symbols-outlined text-3xl">fluid_meditation</span>
+                </div>
+                <h3 class="text-2xl font-bold font-headline">Pure Aesthetic</h3>
+                <p class="text-on-surface-variant leading-relaxed">A workspace that feels calm, focused, and professional. We remove the clutter so you can focus on the pixels that matter.</p>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="bg-surface-container-lowest rounded-3xl p-12 md:p-20 relative overflow-hidden border border-gray-100 mb-32">
+            <div class="max-w-2xl relative z-10">
+                <h2 class="text-4xl font-bold font-headline text-on-surface mb-8">Professional Grade. <br/>Completely Free.</h2>
+                <div class="space-y-6 text-on-surface-variant leading-relaxed">
+                    <p>Designed for photographers, digital marketers, and developers, Ethereal Canvas bridges the gap between complex desktop software and over-simplified web tools.</p>
+                    <p>Our commitment is to provide open, accessible tools that empower creatives to optimize their digital presence without recurring subscriptions or privacy compromises.</p>
+                </div>
+                <div class="mt-12">
+                    <a href="contact_support.html" class="bg-primary text-white px-8 py-3 rounded-full font-bold text-sm hover:opacity-90 active:scale-95 transition-all shadow-xl shadow-primary/20 inline-block">
+                        Connect With Us
+                    </a>
+                </div>
+            </div>
+            <!-- Abstract background shape -->
+            <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl"></div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="footer.js"></script>
+</body>
+
+</html>
