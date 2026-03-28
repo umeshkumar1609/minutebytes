@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://minutebytes.com/sitemap.xml
+Sitemap: https://www.minutebytes.com/sitemap.xml
