@@ -35,7 +35,7 @@ const headerHTML = `
         </div>
         
         <!-- Action Button (Optional Placeholder) -->
-        <div class="absolute right-8 hidden lg:block">
+        <div class="absolute right-8 hidden lg:block" style="display: none;">
             <span class="text-[10px] font-bold uppercase tracking-widest text-[#006573]/50">Professional Edition</span>
         </div>
 

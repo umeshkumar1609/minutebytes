@@ -1,0 +1,33 @@
+{
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/tools_page.html", "destination": "/tools", "permanent": true },
+    { "source": "/about_page.html", "destination": "/about", "permanent": true },
+    { "source": "/contact_support.html", "destination": "/contact", "permanent": true },
+    { "source": "/privacy_policy.html", "destination": "/privacy-policy", "permanent": true },
+    { "source": "/terms_of_service.html", "destination": "/terms-of-service", "permanent": true },
+    { "source": "/compress_page_upload.html", "destination": "/image-compressor", "permanent": true },
+    { "source": "/compress_page_edit.html", "destination": "/image-compressor/edit", "permanent": true },
+    { "source": "/resize_page_upload.html", "destination": "/image-resizer", "permanent": true },
+    { "source": "/resize_page_edit.html", "destination": "/image-resizer/edit", "permanent": true },
+    { "source": "/crop_page_upload.html", "destination": "/image-cropper", "permanent": true },
+    { "source": "/crop_page_edit.html", "destination": "/image-cropper/edit", "permanent": true },
+    { "source": "/convert_page_upload.html", "destination": "/image-converter", "permanent": true },
+    { "source": "/convert_page_edit.html", "destination": "/image-converter/edit", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/tools", "destination": "/tools_page.html" },
+    { "source": "/about", "destination": "/about_page.html" },
+    { "source": "/contact", "destination": "/contact_support.html" },
+    { "source": "/privacy-policy", "destination": "/privacy_policy.html" },
+    { "source": "/terms-of-service", "destination": "/terms_of_service.html" },
+    { "source": "/image-compressor", "destination": "/compress_page_upload.html" },
+    { "source": "/image-compressor/edit", "destination": "/compress_page_edit.html" },
+    { "source": "/image-resizer", "destination": "/resize_page_upload.html" },
+    { "source": "/image-resizer/edit", "destination": "/resize_page_edit.html" },
+    { "source": "/image-cropper", "destination": "/crop_page_upload.html" },
+    { "source": "/image-cropper/edit", "destination": "/crop_page_edit.html" },
+    { "source": "/image-converter", "destination": "/convert_page_upload.html" },
+    { "source": "/image-converter/edit", "destination": "/convert_page_edit.html" }
+  ]
+}

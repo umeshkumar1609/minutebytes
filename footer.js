@@ -21,7 +21,7 @@ const footerHTML = `
         </div>
         
         <div class="text-[#2c2f30]/40 font-['Inter'] text-[10px] uppercase tracking-[0.2em]">
-            © 2024 MinuteBytes. All rights reserved.
+            © 2026 MinuteBytes. All rights reserved.
         </div>
     </div>
 </footer>
