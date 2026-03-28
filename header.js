@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Universal Header Component
  * Injects the unified navigation bar with dropdown functionality.
  */
@@ -7,13 +7,13 @@ const headerHTML = `
 <nav class="fixed top-0 w-full z-50 bg-[#f5f6f7]/80 backdrop-blur-xl border-b border-gray-200/50">
     <div class="relative flex items-center justify-center px-8 py-4 max-w-7xl mx-auto">
         <!-- Logo -->
-        <a href="index.html" class="absolute left-8 text-2xl font-bold text-[#2c2f30] tracking-tighter hover:opacity-80 transition-opacity">
+        <a href="/" class="absolute left-8 text-2xl font-bold text-[#2c2f30] tracking-tighter hover:opacity-80 transition-opacity">
             MinuteBytes
         </a>
         
         <!-- Navigation Links -->
         <div class="hidden md:flex items-center space-x-8 font-['Manrope'] font-semibold tracking-tight">
-            <a href="index.html" id="nav-home" class="nav-link text-[#2c2f30] hover:text-[#006573] transition-all duration-300">Home</a>
+            <a href="/" id="nav-home" class="nav-link text-[#2c2f30] hover:text-[#006573] transition-all duration-300">Home</a>
             
             <!-- Tools Dropdown -->
             <div class="relative group">
@@ -22,16 +22,16 @@ const headerHTML = `
                     <span class="material-symbols-outlined text-sm transition-transform duration-300 group-hover:rotate-180">expand_more</span>
                 </button>
                 <div class="absolute top-full left-1/2 -translate-x-1/2 w-48 bg-white/95 backdrop-blur-2xl border border-gray-200/60 rounded-md shadow-2xl py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300">
-                    <a href="compress_page_upload.html" class="block px-4 py-2 text-sm text-[#2c2f30] hover:bg-primary-container/20 hover:text-primary transition-colors">Image Compressor</a>
-                    <a href="resize_page_upload.html" class="block px-4 py-2 text-sm text-[#2c2f30] hover:bg-primary-container/20 hover:text-primary transition-colors">Image Resizer</a>
-                    <a href="crop_page_upload.html" class="block px-4 py-2 text-sm text-[#2c2f30] hover:bg-primary-container/20 hover:text-primary transition-colors">Image Cropper</a>
-                    <a href="convert_page_upload.html" class="block px-4 py-2 text-sm text-[#2c2f30] hover:bg-primary-container/20 hover:text-primary transition-colors">Image Converter</a>
+                    <a href="/image-compressor" class="block px-4 py-2 text-sm text-[#2c2f30] hover:bg-primary-container/20 hover:text-primary transition-colors">Image Compressor</a>
+                    <a href="/image-resizer" class="block px-4 py-2 text-sm text-[#2c2f30] hover:bg-primary-container/20 hover:text-primary transition-colors">Image Resizer</a>
+                    <a href="/image-cropper" class="block px-4 py-2 text-sm text-[#2c2f30] hover:bg-primary-container/20 hover:text-primary transition-colors">Image Cropper</a>
+                    <a href="/image-converter" class="block px-4 py-2 text-sm text-[#2c2f30] hover:bg-primary-container/20 hover:text-primary transition-colors">Image Converter</a>
                     <div class="border-t border-gray-100 my-1"></div>
-                    <a href="tools_page.html" class="block px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#006573]/50 hover:text-primary transition-colors text-center">View All Tools</a>
+                    <a href="/tools" class="block px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#006573]/50 hover:text-primary transition-colors text-center">View All Tools</a>
                 </div>
             </div>
 
-            <a href="about_page.html" id="nav-about" class="nav-link text-[#2c2f30] hover:text-[#006573] transition-all duration-300">About</a>
+            <a href="/about" id="nav-about" class="nav-link text-[#2c2f30] hover:text-[#006573] transition-all duration-300">About</a>
         </div>
         
         <!-- Action Button (Optional Placeholder) -->
@@ -55,14 +55,14 @@ const headerHTML = `
         <span class="text-[10px] font-bold uppercase tracking-widest text-[#006573]/50">Navigation</span>
     </div>
     <div class="mobile-menu-links">
-        <a href="index.html" id="mobile-nav-home" class="mobile-menu-link">Home</a>
+        <a href="/" id="mobile-nav-home" class="mobile-menu-link">Home</a>
         <div class="mobile-menu-group">Tools</div>
-        <a href="compress_page_upload.html" class="mobile-menu-link">Image Compressor</a>
-        <a href="resize_page_upload.html" class="mobile-menu-link">Image Resizer</a>
-        <a href="crop_page_upload.html" class="mobile-menu-link">Image Cropper</a>
-        <a href="convert_page_upload.html" class="mobile-menu-link">Image Converter</a>
-        <a href="tools_page.html" class="mobile-menu-link mobile-menu-link-tools">View All Tools</a>
-        <a href="about_page.html" id="mobile-nav-about" class="mobile-menu-link">About</a>
+        <a href="/image-compressor" class="mobile-menu-link">Image Compressor</a>
+        <a href="/image-resizer" class="mobile-menu-link">Image Resizer</a>
+        <a href="/image-cropper" class="mobile-menu-link">Image Cropper</a>
+        <a href="/image-converter" class="mobile-menu-link">Image Converter</a>
+        <a href="/tools" class="mobile-menu-link mobile-menu-link-tools">View All Tools</a>
+        <a href="/about" id="mobile-nav-about" class="mobile-menu-link">About</a>
     </div>
 </aside>
 
@@ -208,16 +208,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const path = window.location.pathname;
         const activeClass = 'nav-active';
         
-        if (path.includes('index.html') || path === '/' || path.endsWith('/')) {
+        if (path.includes('/') || path === '/' || path.endsWith('/')) {
             document.getElementById('nav-home')?.classList.add(activeClass);
             document.getElementById('mobile-nav-home')?.classList.add('mobile-nav-active');
-        } else if (path.includes('about_page.html')) {
+        } else if (path.includes('/about')) {
             document.getElementById('nav-about')?.classList.add(activeClass);
             document.getElementById('mobile-nav-about')?.classList.add('mobile-nav-active');
         } else {
             // Tools highlighting for any tool pages
             const toolsTrigger = document.getElementById('nav-tools-trigger');
-            if (path.includes('compress') || path.includes('resize') || path.includes('convert') || path.includes('tools_page')) {
+            if (path.includes('compress') || path.includes('resizer') || path.includes('resize') || path.includes('crop') || path.includes('convert') || path.includes('/tools')) {
                 toolsTrigger?.classList.add(activeClass);
             }
         }

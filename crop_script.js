@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MinuteBytes - Precision Framing Engine (Upgraded)
  * Built on Cropper.js with professional mouse-drags, aspect ratios, and transformations.
  */
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formatDisplay.textContent = originalFileInfo.type.split('/')[1].toUpperCase();
         }
 
-        // --- Pro-grade Cropper.js Configuration for 90° Stability ---
+        // --- Pro-grade Cropper.js Configuration for 90Â° Stability ---
         cropper = new Cropper(imageElement, {
             dragMode: 'crop',          // Enable mouse-drawing
             autoCrop: true,            // Selection on load
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const w = Math.round(event.detail.width);
                 const h = Math.round(event.detail.height);
                 
-                if (selectionDisplay) selectionDisplay.textContent = `${w} × ${h} PX`;
+                if (selectionDisplay) selectionDisplay.textContent = `${w} Ã— ${h} PX`;
                 if (aspectRatioDisplay) aspectRatioDisplay.textContent = getSimpleRatio(w, h);
             }
         });
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const type = sessionStorage.getItem('originalFileType') || 'image/jpeg';
 
         if (!data) {
-            window.location.href = 'crop_page_upload.html';
+            window.location.href = '/image-cropper';
             return;
         }
 
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     newImageBtn?.addEventListener('click', () => {
         if (cropper) cropper.destroy();
         sessionStorage.clear();
-        window.location.href = 'crop_page_upload.html';
+        window.location.href = '/image-cropper';
     });
 
     // Export Process

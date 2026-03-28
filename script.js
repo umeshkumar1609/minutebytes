@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MinuteBytes - Stabilized Image Compression Engine
  *
  * Core fixes in this version:
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (originalPreview) originalPreview.src = '';
         if (optimizedPreview) optimizedPreview.src = '';
         sessionStorage.clear();
-        window.location.href = 'compress_page_upload.html';
+        window.location.href = '/image-compressor';
     };
 
     window.addEventListener('beforeunload', () => {
@@ -491,7 +491,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const sizeFromSession = Number.parseInt(sessionStorage.getItem('originalFileSize') || '0', 10) || 0;
 
         if (!data) {
-            window.location.href = 'compress_page_upload.html';
+            window.location.href = '/image-compressor';
             return;
         }
 

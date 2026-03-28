@@ -85,7 +85,7 @@
 
 <body class="bg-surface text-on-surface font-body min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
     <div id="header-placeholder"></div>
-    <script src="header.js"></script>
+    <script src="/header.js"></script>
     <main class="flex-grow flex flex-col items-center justify-center px-6 py-24 bg-MinuteBytes-gradient">
         <div class="text-center max-w-3xl mb-16 space-y-6">
             <h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface leading-tight">
@@ -134,9 +134,9 @@
             <div class="mt-8">
                 <h3 class="font-headline text-lg font-bold text-on-surface mb-3">Related Tools</h3>
                 <div class="flex flex-wrap gap-3">
-                    <a href="compress_page_upload.html" class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface text-sm font-semibold hover:bg-surface-container-high transition-all">Image Compressor</a>
-                    <a href="resize_page_upload.html" class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface text-sm font-semibold hover:bg-surface-container-high transition-all">Image Resizer</a>
-                    <a href="crop_page_upload.html" class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface text-sm font-semibold hover:bg-surface-container-high transition-all">Image Cropper</a>
+                    <a href="/image-compressor" class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface text-sm font-semibold hover:bg-surface-container-high transition-all">Image Compressor</a>
+                    <a href="/image-resizer" class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface text-sm font-semibold hover:bg-surface-container-high transition-all">Image Resizer</a>
+                    <a href="/image-cropper" class="px-4 py-2 rounded-full bg-surface-container-low text-on-surface text-sm font-semibold hover:bg-surface-container-high transition-all">Image Cropper</a>
                 </div>
             </div>
         </section>
@@ -144,7 +144,7 @@
     </main>
 
     <div id="footer-placeholder"></div>
-    <script src="footer.js"></script>
+    <script src="/footer.js"></script>
 
     <script>
         const fileInput = document.getElementById('file-input');
@@ -161,7 +161,7 @@
                 sessionStorage.setItem('originalFileType', file.type);
                 sessionStorage.setItem('originalFileSize', file.size);
                 // Redirect to specialized converter editor
-                window.location.href = 'convert_page_edit.html';
+                window.location.href = '/image-converter/edit';
             };
             reader.readAsDataURL(file);
         };

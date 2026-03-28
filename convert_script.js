@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MinuteBytesConvert - Automated Image Format Transformation Engine
  * Automatically triggers conversion on format selection and handles broader file types.
  */
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const size = sessionStorage.getItem('originalFileSize');
 
         if (!data) {
-            window.location.href = 'convert_page_upload.html';
+            window.location.href = '/image-converter';
             return;
         }
 
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const backToUpload = () => {
         sessionStorage.clear();
-        window.location.href = 'convert_page_upload.html';
+        window.location.href = '/image-converter';
     };
 
     newImageBtn.addEventListener('click', backToUpload);

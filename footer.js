@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Universal Footer Component
  * Injects the unified footer into all pages.
  */
@@ -14,10 +14,10 @@ const footerHTML = `
         </div>
         
         <div class="flex flex-wrap justify-center gap-8 font-['Inter'] text-[11px] font-bold uppercase tracking-wider">
-            <a class="text-[#2c2f30]/70 hover:text-[#006573] transition-colors" href="about_page.html">About</a>
-            <a class="text-[#2c2f30]/70 hover:text-[#006573] transition-colors" href="privacy_policy.html">Privacy Policy</a>
-            <a class="text-[#2c2f30]/70 hover:text-[#006573] transition-colors" href="terms_of_service.html">Terms of Service</a>
-            <a class="text-[#2c2f30]/70 hover:text-[#006573] transition-colors" href="contact_support.html">Contact Support</a>
+            <a class="text-[#2c2f30]/70 hover:text-[#006573] transition-colors" href="/about">About</a>
+            <a class="text-[#2c2f30]/70 hover:text-[#006573] transition-colors" href="/privacy-policy">Privacy Policy</a>
+            <a class="text-[#2c2f30]/70 hover:text-[#006573] transition-colors" href="/terms-of-service">Terms of Service</a>
+            <a class="text-[#2c2f30]/70 hover:text-[#006573] transition-colors" href="/contact">Contact Support</a>
         </div>
         
         <div class="text-[#2c2f30]/40 font-['Inter'] text-[10px] uppercase tracking-[0.2em]">

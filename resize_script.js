@@ -1,4 +1,4 @@
-/**
+﻿/**
  * MinuteBytesResize - Automated Pica-Powered Resizing Engine
  * Automatically triggers resizing on input changes with high-performance debouncing.
  */
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const size = sessionStorage.getItem('originalFileSize');
 
         if (!data) {
-            window.location.href = 'resize_page_upload.html';
+            window.location.href = '/image-resizer';
             return;
         }
 
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const backToUpload = () => {
         sessionStorage.clear();
-        window.location.href = 'resize_page_upload.html';
+        window.location.href = '/image-resizer';
     };
 
     newImageBtn.addEventListener('click', backToUpload);
